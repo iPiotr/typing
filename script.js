@@ -16,7 +16,6 @@ const wordInput = document.querySelector('#word-input');
 const currentWord = document.querySelector('#current-word');
 const scoreDisplay = document.querySelector('#score');
 const timeDisplay = document.querySelector('#time');
-const message = document.querySelector('#message');
 const seconds = document.querySelector('#seconds');
 const autoFocus = document.querySelector('#word-input').autofocus;
 
@@ -85,8 +84,6 @@ const words = [
 ];
 
 function init() {
-    seconds.innerHTML = currentLevel;
-    seconds.classList.add('good');
     showWord(words);
     wordInput.addEventListener('input', startMatch);
     setInterval(countdown, 1000);
@@ -110,12 +107,11 @@ function startMatch() {
 
 function matchWords() {
     if (wordInput.value === currentWord.innerHTML) {
-        message.innerHTML = 'Correct !';
-        message.classList.add('good');
-        message.classList.remove('bad');
+        wordInput.classList.add('good');
+        wordInput.classList.remove('bad');
         return true;
     } else {
-        message.innerHTML = '';
+        wordInput.classList.remove('good');
         return false;
     }
 }
@@ -136,12 +132,11 @@ function countdown() {
 
 function checkStatus() {
     if (!isPlaying && time === 0) {
-        message.innerHTML = 'Game Over !';
-        message.classList.remove('good');
-        message.classList.add('bad');
+        wordInput.classList.remove('good');
+        wordInput.classList.add('bad');
         score = 0;
     }
-
+    
     if (score === 0) {
         currentLevel = levels.easy;
     }
@@ -151,4 +146,6 @@ function checkStatus() {
     else if (score === 20) {
         currentLevel = levels.hard;
     }
+    seconds.innerHTML = currentLevel;
+    
 }

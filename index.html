@@ -9,20 +9,20 @@
     <title>TypingKiller</title>
 </head>
 
-<body class="bg center">
-    <header>
-        <h1>Typing Killer</h1>
-    </header>
+<body class="center">
+    <div class="wrapper">
+        <div class="content">
+            <div class="part">
+                <h4>Type The Given Word Within <p id="seconds"></p> Seconds</h4>
+            </div>
+                <h2 class="word" id="current-word"></h2>
+                <input type="text" class="center typing" placeholder="Start typing..." id="word-input" autofocus>
+                
+                <h3>Time Left: <span id="time">0</span></h3>
+                <h3>Score: <span id="score">0</span></h3>
+        </div>
+    </div>
     
-    <div>
-        <p>Type The Given Word Within <span id="seconds"></span> Seconds:</p>
-        <h2 class="word" id="current-word"></h2>
-        <input type="text" class="center typing" placeholder="Start typing..." id="word-input" autofocus>
-        <h2 id="message"></h2>
-
-        <h3>Time Left:<span id="time">0</span></h3>
-        <h3>Score:<span id="score">0</span></h3>
-
     <script src="script.js"></script>
 </body>
 
