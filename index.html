@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>TypingKiller</title>
+    <title>Typing speedtest</title>
 </head>
+<body>
 
-<body class="center">
-    <div class="wrapper">
-        <div class="content">
-            <div class="part">
-                <h4>Type The Given Word Within <p id="seconds"></p> Seconds</h4>
-            </div>
-                <h2 class="word" id="current-word"></h2>
-                <input type="text" class="center typing" placeholder="Start typing..." id="word-input" autofocus>
-                
-                <h3>Time Left: <span id="time">0</span></h3>
-                <h3>Score: <span id="score">0</span></h3>
-        </div>
+    <p id="focus">Click to focus</p>
+    <div class="targetText"></div>
+    <div class="resultText"></div>
+    
+    <div class="statsList">
+            Words per minute <span>0</span>
+            Word count <span>0</span>
+            Timer <span>0</span>
+            Errors <span>0</span>
+    </div>
+
+    <div>
+        <textarea name="" id="input_text"></textarea>
     </div>
     
-    <script src="script.js"></script>
 </body>
-
 </html>
