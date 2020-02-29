@@ -7,21 +7,30 @@
     <title>Typing speedtest</title>
 </head>
 <body>
+<div class="content">
+    <div class="left-panel">
+        <h1 id="output">Type</h1>
+        <div class="target">sds</div>
+        <div id="your-attempt" class="mono your-attempt" placeholder="Your text will appear here"></div>
 
-    <p id="focus">Click to focus</p>
-    <div class="targetText"></div>
-    <div class="resultText"></div>
-    
-    <div class="statsList">
-            Words per minute <span>0</span>
-            Word count <span>0</span>
-            Timer <span>0</span>
-            Errors <span>0</span>
-    </div>
+        <div>
+            <textarea name="" id="input_text" cols="30"
+                rows="10">Poor done soft smallest speech fireplace mile halfway sat stage atmosphere underline pan they enter car magnet fought special dot view when hung old.</textarea>
+        </div>
+   </div>
 
-    <div>
-        <textarea name="" id="input_text"></textarea>
-    </div>
+   <div class="right-panel">
+        <div class="results">
+            <ul class="stats">
+                <li>Timer: <span>0</span></li>
+                <li>Wordcount: <span>0</span></li>
+                <li>Words per minute: <span>0</span></li>
+                <li>Errors: <span>0</span></li>
+            </ul>
+        </div>
+   </div>
+</div>
+
     
 </body>
 </html>
